@@ -23,12 +23,10 @@ RUN pip install -r requirements.txt
 # copy project
 COPY . .
 
+RUN python manage.py makemigrations mail 
+RUN python manage.py migrate 
 # collect static files
 RUN python manage.py collectstatic --noinput
-
-# add and run as non-root user
-RUN adduser -D myuser
-USER myuser
 
 # run gunicorn
 CMD gunicorn hello_django.wsgi:application --bind 0.0.0.0:$PORT
