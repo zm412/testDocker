@@ -1,0 +1,31 @@
+textarea {
+    min-height: 400px;
+}
+
+.overhid{
+  overflow: hidden;
+}
+
+.emails_list a {
+  color:#495057;
+}
+
+.ifRead {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+
+.show_elem{
+  border-radius: .25rem;
+}
+
+.ifNotRead{
+  font-weight: bold;
+}
+
+body{
+  color:#495057;
+}
+
+
+

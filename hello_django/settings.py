@@ -20,13 +20,14 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='foo')
 
 DEBUG = int(os.environ.get('DEBUG', default=0))
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'young-citadel-14363.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'zmumpimail.herokuapp.com']
 
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'mail',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -99,6 +100,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'mail.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
